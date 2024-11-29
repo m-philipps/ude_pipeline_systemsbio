@@ -2,6 +2,11 @@
 
 Contains the code to reproduce the analysis for the paper **Universal differential equations for systems biology: Current state and open problems**.
 
+## Application examples
+The application examples from the publication are referenced by the original authors@
+- Glycolysis: Ruoff [paper reference](https://doi.org/10.1016/S0301-4622(03)00191-1)
+- STAT5 dimerisation: Boehm [paper reference](https://doi.org/10.1021/pr5006923)
+
 
 ## Repo structure
 - `problems.json`: Each problem is listed with a short description and the interface between the mechanistic and ANN model components
