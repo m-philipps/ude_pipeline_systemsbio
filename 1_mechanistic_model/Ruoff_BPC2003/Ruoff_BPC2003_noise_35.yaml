@@ -1,0 +1,11 @@
+format_version: 1
+parameter_file: parameters_noise_35.tsv
+problems:
+- condition_files:
+  - experimentalCondition.tsv
+  measurement_files:
+  - measurementData.tsv
+  observable_files:
+  - observables.tsv
+  sbml_files:
+  - ../model_Ruoff_BPC2003.xml

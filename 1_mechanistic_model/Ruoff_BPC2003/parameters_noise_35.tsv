@@ -1,0 +1,16 @@
+parameterId	parameterName	parameterScale	lowerBound	upperBound	nominalValue	estimate
+J_0	J_0	log10	1E-01	1E+02	2.5	1
+k_1	k_1	log10	1	1E+03	100	1
+k_2	k_2	log10	1E-01	1E+02	6	1
+k_3	k_3	log10	1E-01	1E+02	16	1
+k_4	k_4	log10	1	1E+03	100	1
+k_5	k_5	log10	1E-01	1E+02	1.28	1
+k_6	k_6	log10	1E-01	1E+02	12	1
+k_ex	k	log10	1E-01	1E+02	1.8	1
+kappa	\kappa	log10	1E-01	1E+02	13	1
+K_1	K_1	log10	1E-02	1E+01	0.52	1
+N	N	log10	1E-01	1E+02	1	1
+A	A	log10	1E-01	1E+02	4	1
+phi	\phi	log10	1E-02	1E+01	0.1	1
+sd_N_2_obs	\sigma_{N_2,obs}	lin	0	0.2	0.04248545	1
+sd_A_3_obs	\sigma_{A_3,obs}	lin	0	3.2	0.6504589	1

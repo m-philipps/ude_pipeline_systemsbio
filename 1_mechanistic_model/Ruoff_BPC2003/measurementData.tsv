@@ -1,0 +1,3 @@
+observableId	preequilibrationConditionId	simulationConditionId	measurement	time	observableParameters	noiseParameters	datasetId
+N_2_obs		model1_data1	0.077	0.0		sd_N_2_obs	model1_data1_N_2_obs
+A_3_obs		model1_data1	2.457	0.0		sd_A_3_obs	model1_data1_A_3_obs

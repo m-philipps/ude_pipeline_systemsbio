@@ -1,0 +1,3 @@
+observableId	observableName	observableFormula	noiseFormula	observableTransformation	noiseDistribution
+N_2_obs	NADH	N_2	noiseParameter1_N_2_obs	lin	normal
+A_3_obs	ATP	A_3	noiseParameter1_A_3_obs	lin	normal
