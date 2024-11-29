@@ -1,0 +1,2 @@
+epoch_optimum,epochs_ADAM,epochs_BFGS,runtime_ADAM_in_min,runtime_BFGS_in_min,mse_obs_test,mse_hidden_test,nmse_obs_train,nmse_obs_trainval,nmse_hidden_trainval,nmse_obs_test,nmse_hidden_test,mae_obs_trainval,nmae_obs_trainval,mae_obs_test,nmae_obs_test,ude_nr
+,500,103,1.272090450922648,0.4429514487584432,0.4353618396097937,15.346244977135177,0.05814174860769195,0.06258451902767255,9.69912320015019,2.993473897853839,28.69453678773185,0.09718543880359207,0.18142163341956766,0.4119891570312514,1.302206994392113,83659
