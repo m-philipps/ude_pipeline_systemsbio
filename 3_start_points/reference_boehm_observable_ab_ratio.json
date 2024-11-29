@@ -1,0 +1,11 @@
+{
+    "n_starts": 15000,
+    "hp_options": {
+        "fnn_depth": [1, 2, 3, 4],
+        "fnn_width": [3, 5, 10],
+        "activation": ["tanh", "relu", "rbf", "swish"],
+        "regularisation_strength": [0, 1e-3, 1e3],
+        "lr_adam": [1e-4, 1e-1],
+        "normalisation": [0, 1]
+    }
+}
