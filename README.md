@@ -2,6 +2,9 @@
 
 Contains the code to reproduce the analysis for the paper **Universal differential equations for systems biology: Current state and open problems**.
 
+Feel free to reach out if you want to reproduce our results or use parts of the pipeline for your own work.
+
+
 ## Application examples
 The application examples from the publication are referenced by the original authors@
 - Glycolysis: Ruoff [paper reference](https://doi.org/10.1016/S0301-4622(03)00191-1)
