@@ -1,0 +1,116 @@
+{
+    "ruoff_atp_consumption": {
+        "description": "The ATP consumption in the glysolysis oscillator model is approximated by an ANN.",
+        "petab_name": "Ruoff_BPC2003",
+        "mechanistic_parameters": [
+            1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1
+        ],        
+        "nn_input": {
+            "type": "species",
+            "ids": [1, 1, 1, 1, 1, 1, 1]
+        },
+        "nn_output": {
+            "type": "species",
+            "ids": [0, 0, 0, 0, 0, 1, 0]
+        }
+    },
+
+    "boehm_papa_export_kinetic": {
+        "description": "The ANN replaces the irreversible conversion of nucpApA to STAT5A, which includes the export of pApA from the nucleus, and the pApA dimer dissociation into its STAT5A monomers. We implement mass conservation and directionality via the output transformation (1 nucpApA -> 2 STAT5A).",
+        "petab_name": "Boehm_JProteomeRes2014",
+        "mechanistic_parameters": [
+            1, 1, 1, 1, 1, 1, 1, 1, 1
+        ],
+        "nn_input": {
+            "type": "species",
+            "ids": [1, 1, 1, 1, 1, 1, 1, 1]
+        },
+        "nn_output": {
+            "type": "species",
+            "ids": [1, 0, 0, 0, 0, 1, 0, 0]
+        },
+        "nn_output_transform": {
+            "type:": "mass conservation", 
+            "factors": [2, 0, 0, 0, 0, -1, 0, 0]
+        }
+    },
+
+    "boehm_papb_differential": {
+        "description": "The rate of change of the pApB species is entirely learned by an ANN. There is no constraint for mass conservation.",
+        "petab_name": "Boehm_JProteomeRes2014",
+        "mechanistic_parameters": [
+            1, 1, 1, 1, 1, 1, 1, 1, 1
+        ],
+        "nn_input": {
+            "type": "species",
+            "ids": [1, 1, 1, 1, 1, 1, 1, 1]
+        },
+        "nn_output": {
+            "type": "species",
+            "ids": [0, 0, 0, 1, 0, 0, 0, 0]
+        }
+    },
+
+    "boehm_papb_differential_BaF3_Epo": {
+        "description": "The rate of change of the pApB species is entirely learned by an ANN, which takes all state variables and the time-dependent Epo concentration as inputs.",
+        "petab_name": "Boehm_JProteomeRes2014",
+        "mechanistic_parameters": [
+            1, 1, 1, 1, 1, 1, 1, 1, 1
+        ],
+        "nn_input": {
+            "type": "species",
+            "ids": [1, 1, 1, 1, 1, 1, 1, 1, 1]
+        },
+        "nn_output": {
+            "type": "species",
+            "ids": [0, 0, 0, 1, 0, 0, 0, 0]
+        }
+    },
+    
+    "boehm_export_augmented": {
+        "description": "The export of the pXpX dimers is augmented by two additional species K_A and K_B, the dynamics of which are entirely given by an ANN.",
+        "petab_name": "Boehm_JProteomeRes2014",
+        "mechanistic_parameters": [
+            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+        ],
+        "nn_input": {
+            "type": "species",
+            "ids": [1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1]
+        },
+        "nn_output": {
+            "type": "species",
+            "ids": [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1]
+        },
+        "augmentation": {
+            "type": "species",
+            "name": [
+                "K_A",
+                "K_AB",
+                "K_B"
+            ]
+        }
+    },
+
+    "boehm_observable_ab_ratio": {
+        "description": "The observed ratio STAT5A/STAT5B is a complex function of the species, which is approximated by an ANN here. The ANN is not part of the dynamic system.",
+        "petab_name": "Boehm_JProteomeRes2014",
+        "mechanistic_parameters": [
+            1, 1, 1, 1, 1, 1, 1, 1, 1
+        ],
+        "nn_input": {
+            "type": "species",
+            "ids": [1, 1, 1, 1, 1, 1, 1, 1]
+        },
+        "nn_output": {
+            "type": "observable",
+            "ids": [0, 0, 1]
+        }
+    },
+
+    "boehm_ids": [
+        "boehm_papa_export_kinetic",
+        "boehm_papb_differential_BaF3_Epo",
+        "boehm_export_augmented",
+        "boehm_observable_ab_ratio"
+    ]
+}
