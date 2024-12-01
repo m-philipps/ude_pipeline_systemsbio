@@ -140,9 +140,6 @@ function load_test_parameter_values_and_state_ruoff(noise_level, nn_model, par_t
 end
 
 function get_parameter_bounds(problem_name, noise_level)
-    if problem_name == "boehm_papb_differential_BaF3_Epo"
-        problem_name = "boehm_papb_differential"
-    end
 
     problem_definition = parsefile("problems.json")[problem_name]
     # Load parameter names
@@ -217,7 +214,7 @@ end
 
 function define_ude_model(problem_name, noise_level, hyperparameters)
     # Define NN model
-    if problem_name == "boehm_papb_differential_BaF3_Epo"
+    if problem_name == "boehm_papb_differential"
         problem_definition = parsefile("problems.json")["boehm_papb_differential"]
         neurons_in = sum(problem_definition["nn_input"]["ids"])
         neurons_out = sum(problem_definition["nn_output"]["ids"])

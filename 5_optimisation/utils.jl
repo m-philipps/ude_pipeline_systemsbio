@@ -262,7 +262,6 @@ function get_IC_or_IC_IDS(problem_name, noise_level, sparsity, θ)
         "boehm_papa_export_kinetic",
         "boehm_observable_ab_ratio",
         "boehm_papb_differential",
-        "boehm_papb_differential_BaF3_Epo",
     ]
         return SPECIES_IC, missing
     elseif problem_name == "boehm_export_augmented"

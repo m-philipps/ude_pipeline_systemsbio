@@ -93,7 +93,7 @@
 
     "boehm_ids": [
         "boehm_papa_export_kinetic",
-        "boehm_papb_differential_BaF3_Epo",
+        "boehm_papb_differential",
         "boehm_export_augmented",
         "boehm_observable_ab_ratio"
     ]
