@@ -50,22 +50,6 @@
             "ids": [0, 0, 0, 1, 0, 0, 0, 0]
         }
     },
-
-    "boehm_papb_differential_BaF3_Epo": {
-        "description": "The rate of change of the pApB species is entirely learned by an ANN, which takes all state variables and the time-dependent Epo concentration as inputs.",
-        "petab_name": "Boehm_JProteomeRes2014",
-        "mechanistic_parameters": [
-            1, 1, 1, 1, 1, 1, 1, 1, 1
-        ],
-        "nn_input": {
-            "type": "species",
-            "ids": [1, 1, 1, 1, 1, 1, 1, 1, 1]
-        },
-        "nn_output": {
-            "type": "species",
-            "ids": [0, 0, 0, 1, 0, 0, 0, 0]
-        }
-    },
     
     "boehm_export_augmented": {
         "description": "The export of the pXpX dimers is augmented by two additional species K_A and K_B, the dynamics of which are entirely given by an ANN.",
