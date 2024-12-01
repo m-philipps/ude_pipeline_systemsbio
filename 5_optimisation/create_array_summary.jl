@@ -3,28 +3,13 @@ include("../2_measurements/load_data.jl")
 using DataFrames: outerjoin
 using CSV: write
 
-experiment_name = ARGS[2] # "2024_07_22_Ruoff_Grid"
-local_result_storage = true
-split_summmary = true
+experiment_name = "2024_07_22_Ruoff_Grid"
 
 # load overview of experiments
 experimental_settings = load_overview_dataframe(experiment_name)
 
-if split_summmary
-    array_nr = parse(Int, ARGS[1])
-    eval_n_udes = parse(Int, ARGS[3])
-    ude_start = 1 + eval_n_udes * (array_nr - 1)
-    ude_end = eval_n_udes * array_nr
-    experimental_settings = experimental_settings[ude_start:ude_end, :]
-    println("Evaluate from $(ude_start) to $(ude_end)")
-end
+result_path = joinpath("5_optimisation", experiment_name, "result")
 
-result_path = "."
-if local_result_storage
-    result_path = joinpath("5_optimisation", experiment_name, "result")
-else
-    result_path = joinpath("/storage/groups/hasenauer_lab/sym", experiment_name, "result")
-end
 
 function get_epochs_and_runtime(ude_nr, result_path)
     training_times_and_epochs = missing
@@ -395,11 +380,4 @@ for ude_nr in experimental_settings.ude_nr
 end
 
 experiment_summary = outerjoin(experimental_settings, metric_stats_df, on = :ude_nr)
-if split_summmary
-    write(
-        joinpath(result_path, "../experiment_summary_array_$(array_nr).csv"),
-        experiment_summary,
-    )
-else
-    write(joinpath(result_path, "../experiment_summary.csv"), experiment_summary)
-end
+write(joinpath(result_path, "../experiment_summary.csv"), experiment_summary)

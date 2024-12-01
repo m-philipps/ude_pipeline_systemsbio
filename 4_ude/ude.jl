@@ -7,7 +7,6 @@ using DataFrames: DataFrame
 using ComponentArrays: ComponentVector, ComponentArray
 using OrdinaryDiffEq: ODEProblem, Tsit5, KenCarp4, solve
 
-# TODO: check shift in parameter transform: still necessary?
 
 """
 Given parameters in the untransformed space, transform them to the transformed space 
