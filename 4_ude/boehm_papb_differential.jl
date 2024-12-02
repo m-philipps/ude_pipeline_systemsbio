@@ -53,7 +53,7 @@ function ude_dynamics_full!(
 
     # NN component
     state_idx_nn_in, state_idx_nn_out = state_idx_nn
-    du_nn = nn_model(u[state_idx_nn_in], p.nn, st_nn)[1]
+    du_nn = nn_model(vcat(u, BaF3_Epo), p.nn, st_nn)[1]
     # zero contribution to all states but state_idx_nn_out
     du_nn_full = eltype(u).(zeros(state_length))
     du_nn_full[state_idx_nn_out] = du_nn
