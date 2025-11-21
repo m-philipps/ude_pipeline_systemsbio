@@ -1,0 +1,14 @@
+amici==0.25.1
+fides==0.7.8
+h5py==3.11.0
+matplotlib==3.9.0
+numpy==1.26.4
+pandas==2.2.2
+petab==0.4.1
+pypesto==0.5.1
+python-libsbml==5.20.4
+sbmlmath==0.2.0
+scikit-learn==1.5.1
+scipy==1.13.1
+seaborn==0.13.2
+sympy==1.12.1
