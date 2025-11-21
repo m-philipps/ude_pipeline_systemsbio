@@ -103,4 +103,5 @@ factors = random.choice(
 df["λ_reg"] = df["λ_reg"] * factors
 
 output_dir = dir_3 / ude_id
+output_dir.mkdir(exist_ok=True)
 df.to_csv(output_dir / "hps.csv", index=False)
