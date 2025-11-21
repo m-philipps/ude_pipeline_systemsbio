@@ -27,6 +27,7 @@ from reference_ruoff import (
 
 petab_dir = base_dir / "1_mechanistic_model" / "Ruoff_BPC2003"
 data_dir = Path(__file__).parent / "Ruoff_synthetic_data"
+data_dir.mkdir(exist_ok=True)
 
 rng = np.random.default_rng(seed=2)
 
@@ -157,7 +158,7 @@ if __name__ == "__main__":
         tn = len(t)
         t_train_val = [ti for ti in t if ti <= TRAINING_ENDPOINT]
         if n_datapoints == 25:
-            print("8 datapoints/observable -> tran/val split 5:3")
+            print("8 datapoints/observable -> train/val split 5:3")
             t_training = [t_train_val[ti] for ti in [0, 2, 3, 5, 7]]
             t_validation = [t_train_val[ti] for ti in [1, 4, 6]]
         else:  
